@@ -1,5 +1,6 @@
 package minitest;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -7,10 +8,10 @@ import java.util.List;
 
 /**
  * @author fengyi
- * @description
+ * @description Test DictionarySolution
  * @date 2020-07-20
  */
-public class SolutionTest {
+public class DictionarySolutionTest {
 
     @Test
     public void testWorkBreak1() {
@@ -26,9 +27,10 @@ public class SolutionTest {
         dictionaryList.add("cream");
         dictionaryList.add("man go");
         dictionaryList.add("and");
-        Solution solution = new Solution();
+        DictionarySolution solution = new DictionarySolution();
         List<String> strings = solution.wordBreak(inputStr, dictionaryList);
         System.out.println(strings.toString());
+        Assert.assertEquals("[i like sam sung mobile, i like samsung mobile]", strings.toString());
     }
 
 }
